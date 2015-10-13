@@ -129,6 +129,13 @@ def merge(a, b):
 
         iterations += 1
 
+    # one of the lists has extra elems at the end
+    # since we know the list itself is already sorted
+    # and we can't compare it to elems of the other list
+    # (since all of those have already been sorted)
+    # we just append the end of the list to the new list
+    # note that it cannot be the case that both a and b
+    # have leftovers, given the guard of the while loop
     if ai < len(a) - 1:
         new += a[ai:]
 
